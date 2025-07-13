@@ -141,6 +141,6 @@ cv2.destroyAllWindows()
 - haarcascade로 얼굴 인식 후 bounding box 표시 완료
 
 ---
-## 실습 결과 사진
+## 실습 결과 사진 및 영상
 ![결과](face_total_test.png)
-
+![영상](3.mp4)
