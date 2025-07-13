@@ -71,12 +71,13 @@ results = model.train(
 ---
 
 ### (5) 모델 저장
-
+#### 구글 드라이브로 저장
 ```python
 results_path = '/content/runs/detect/dog_detection_model_folder_structure/'
 destination_path = '/content/drive/MyDrive/YOLO_Models/'
 !mkdir -p {destination_path}
 !cp -r {results_path} {destination_path}
+print(f"학습 결과가 '{destination_path}'에 성공적으로 복사되었습니다.")
 ```
 
 ---
@@ -84,17 +85,20 @@ destination_path = '/content/drive/MyDrive/YOLO_Models/'
 ### (6) 모델 예측
 
 ```python
-model = YOLO('/content/drive/MyDrive/YOLO_Models/dog_detection_model_folder_structure/weights/best.pt')
-test_image_path = '/content/drive/MyDrive/test_dog.jpg'
+model = YOLO('/content/drive/MyDrive/YOLO_Models/dog_detection_model_folder_structure/weights/best.pt') 
+test_image_path = '/content/drive/MyDrive/test_dog.jpg' #테스트 할 이미지 경로 입력
 results = model.predict(source=test_image_path, save=True, conf=0.5)
 
 for r in results:
     print(f"예측 결과 저장 경로: {r.save_dir}")
-```
+print("\n 예측이 완료되었습니다. 결과 이미지는 코랩 파일 탐색기의 'runs/detect/predict' 폴더에서 확인하거나,
+저장 경로를 통해 접근할 수 있습니다.")
 
+```
 ---
 
 ## 3. 실습 결과
 
 - 강아지 인식 성공 시, bounding box가 그려진 이미지가 저장됨
 - `runs/detect/predict/` 경로에 결과 이미지 확인 가능
+- ![강아지 인식 결과](yolo_result.png)
