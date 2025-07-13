@@ -33,8 +33,8 @@ train: images/train/
 val: images/val/
 nc: 1
 names: ['dog']
-```
 # 저장 시 주의 : 반드시 UTF-8 인코딩으로 저장
+```
 ---
 
 ### (3) 구글 드라이브 업로드
