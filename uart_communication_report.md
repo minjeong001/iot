@@ -46,8 +46,8 @@ sudo apt-get update
 sudo apt-get install python3-pip
 pip3 install pyserial
 
-#오류로 인해 가상환경 사용시
 
+#오류로 인해 가상환경 사용시
 mkdir my_arduino_project
 cd my_arduino_project
 python3 -m venv venv
