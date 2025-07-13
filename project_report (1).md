@@ -12,10 +12,11 @@
 
 ## 2. 실습 과정 및 코드
 
-### (1) 데이터셋 폴더 구조 변경
+### (1) 데이터셋 폴더 구조 변경 (로컬 pc에서)
+아래 그림처럼 your_dataset 폴더 안의 구조를 정확히 맞춰준다
 ```
 your_dataset/
-├── images/
+├── images/         
 │   ├── train/      # 학습 이미지 (dog__1_.jpg ~ dog__81_.jpg)
 │   └── val/        # 검증 이미지 (dog__82_.jpg ~ dog__101_.jpg)
 ├── labels/
